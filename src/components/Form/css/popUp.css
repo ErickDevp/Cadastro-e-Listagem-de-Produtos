@@ -1,0 +1,163 @@
+.popup {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    
+    background: var(--background-popup);
+    z-index: 100;
+}
+
+form {
+    margin: 80px auto;
+
+    max-width: 580px;
+    padding: 30px 20px;
+    background: var(--background);
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form h1 {
+    font-size: 36px;
+    padding-bottom: 10px;
+    color: var(--color-primary);
+}
+
+form h3 {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+form div {
+    width: 100%;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+form input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    height: 66px;
+
+    font-size: 17px;
+    font-weight: 700;
+    
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px 20px;
+    outline: none;
+    background-color: var(--color-input);
+}
+
+form textarea {
+    margin: 10px 0;
+    height: 120px;
+    padding-top: 20px;
+}
+
+form input::placeholder, textarea::placeholder {
+    font-weight: bold;
+    color: var(--color-placeholder);
+    font-size: 15px;
+}
+
+form .input-radio {
+    width: 250px;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .input-radio div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  input[type="radio"]::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  input[type="radio"]:checked::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+
+
+form .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+form .buttons button {
+    width: 100%;
+    height: 45px;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+form .buttons .btn-cancelar {
+    background: var(--background);
+    color: var(--color-font);
+    border: 2px solid var(--color-primary);
+    transition: 300ms;
+}
+
+form .buttons .btn-cancelar:hover {
+    background-color: #00000017;
+}
+
+form .buttons .btn-salvar {
+    background: var(--color-primary);
+    color: var(--background);
+    transition: 300ms;
+    border: none;
+}
+
+form .buttons .btn-salvar:hover {
+    background-color: #02aa6c;
+}
+
+@media (min-width: 430px) {
+    form .inputs {
+        flex-direction: row;
+    }
+}
+  

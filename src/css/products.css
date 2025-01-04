@@ -1,0 +1,63 @@
+.products {
+    background: var(--color-input);
+    padding: 10px 25px 10px 25px;
+    margin: 0 20px 10px;
+
+    min-width: 240px;
+    height: 68px;
+    border-radius: 10px;
+
+    font-weight: 700;
+    font-size: 17px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 300ms;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.products:hover {
+    background: #e2e3e4;
+}
+
+.infos {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.available {
+    width: 18px;
+    height: 100%;
+
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    left: 0;
+}
+
+.products button {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    color: var(--color-primary);
+    font-size: 21px;
+    transition: 300ms;
+    background: none;
+}
+
+.products button:hover {
+    color: #10af75;
+}
+
+.nao-disponivel {
+    background: #af1010;
+}
+
+.disponivel {
+    background: var(--color-primary);
+}
